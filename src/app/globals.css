@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #02a1f2;
+  --color-primary-light: #6ec4ff;
+  --color-accent: #8B5CF6;
+  --color-accent-light: #A78BFA;
+  --color-dark: #1B1A1F;
+  --color-dark-light: #232326;
+  --font-sans: var(--font-noto-sans-jp), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+/* Animated mesh gradient background - orbiting blurred circles */
+@keyframes orbit-1 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(60%, -40%); }
+  50%  { transform: translate(20%, 50%); }
+  75%  { transform: translate(-50%, 10%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes orbit-2 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(-50%, 45%); }
+  50%  { transform: translate(-60%, -30%); }
+  75%  { transform: translate(40%, -50%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes orbit-3 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(50%, 35%); }
+  50%  { transform: translate(-35%, 55%); }
+  75%  { transform: translate(-55%, -30%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes orbit-4 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(-55%, -40%); }
+  50%  { transform: translate(45%, -35%); }
+  75%  { transform: translate(20%, 50%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes orbit-5 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(35%, 55%); }
+  50%  { transform: translate(-45%, 25%); }
+  75%  { transform: translate(-25%, -50%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes orbit-6 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(-40%, 50%); }
+  50%  { transform: translate(55%, 20%); }
+  75%  { transform: translate(30%, -45%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes orbit-7 {
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(45%, -35%); }
+  50%  { transform: translate(-30%, -50%); }
+  75%  { transform: translate(-50%, 40%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+/* Float animation for SNS icons */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Gradient text utilities */
+.gradient-text-primary {
+  background: linear-gradient(135deg, #02a1f2 0%, #29a8f7 25%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #02a1f2 0%, #6ec4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* メッシュグラデーションテキスト */
+.gradient-text-mesh {
+  background:
+    radial-gradient(ellipse at 10% 40%, #02a1f2 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, #8B5CF6 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 80%, #6ec4ff 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 70%, #A78BFA 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 10%, #29a8f7 0%, transparent 40%),
+    linear-gradient(135deg, #02a1f2 0%, #8B5CF6 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* メッシュグラデーション（水色×紫の混ざり合い） */
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse at 15% 25%, #02a1f2cc 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 15%, #8B5CF6cc 0%, transparent 45%),
+    radial-gradient(ellipse at 40% 60%, #A78BFAaa 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 65%, #29a8f7bb 0%, transparent 45%),
+    radial-gradient(ellipse at 25% 85%, #8B5CF6aa 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 30%, #6ec4ffbb 0%, transparent 40%),
+    linear-gradient(135deg, #02a1f2 0%, #29a8f7 25%, #8B5CF6 100%);
+}

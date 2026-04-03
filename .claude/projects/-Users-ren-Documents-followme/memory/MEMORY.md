@@ -1,0 +1,3 @@
+- [Gradient direction](feedback_gradient_direction.md) — グラデーションは左上→右下（135deg）で統一
+- [Gradient ratio](feedback_gradient_ratio.md) — 水色25%→紫100%の比率で統一
+- [Gradient mesh](feedback_gradient_mesh.md) — メッシュグラデーション（楕円重ね）をクラス.gradient-meshで利用可能
