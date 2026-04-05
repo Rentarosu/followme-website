@@ -1,5 +1,3 @@
-"use client";
-
 export default function Mission() {
   return (
     <section id="mission" className="relative py-16 md:py-20 overflow-hidden rounded-br-[80px] md:rounded-br-[140px]" style={{ background: "linear-gradient(135deg, #eef8ff 0%, #f3eeff 50%, #e8f4ff 100%)" }}>

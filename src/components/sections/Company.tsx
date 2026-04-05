@@ -1,5 +1,3 @@
-"use client";
-
 const companyInfo = [
   { label: "Company", value: "フォロミー（法人登記準備中）" },
   { label: "Founded", value: "2026年4月（予定）" },
