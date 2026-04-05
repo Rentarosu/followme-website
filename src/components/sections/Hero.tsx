@@ -136,7 +136,7 @@ export default function Hero() {
               style={{ transform: `translate(${card.x}px, ${card.y}px) rotate(${card.rotate}deg)`, animationDelay: `${card.delay}s` }}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.15)] border-2 border-white/80" style={{ width: card.w, height: card.h }}>
-                <Image src={card.src} alt="" fill className="object-cover brightness-110" />
+                <Image src={card.src} alt="" fill className="object-cover brightness-110" sizes={`${card.w}px`} />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10">
                   <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="#1B1A1F">

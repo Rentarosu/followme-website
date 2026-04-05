@@ -72,6 +72,8 @@ export default function Member() {
                     alt={member.name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -85,6 +87,8 @@ export default function Member() {
                     alt={member.name}
                     fill
                     className="object-cover"
+                    sizes="112px"
+                    loading="lazy"
                     style={{ transform: `scale(${member.avatarScale})`, objectPosition: member.avatarPos }}
                   />
                 </div>

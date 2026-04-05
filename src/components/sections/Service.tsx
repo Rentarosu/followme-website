@@ -45,7 +45,7 @@ export default function Service() {
           {services.map((service, i) => (
             <div key={service.number} className={`animate-fade-in-up flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-8 md:gap-12`} style={{ animationDelay: `${i * 0.1}s` }}>
               <div className="relative w-full md:w-[42%] aspect-[4/3] flex-shrink-0 overflow-hidden rounded-2xl">
-                <Image src={service.image} alt={service.title} fill className="object-cover" />
+                <Image src={service.image} alt={service.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 42vw" loading="lazy" />
               </div>
               <div className="flex-1">
                 <span className="text-4xl font-black gradient-text-primary leading-none">{service.number}</span>

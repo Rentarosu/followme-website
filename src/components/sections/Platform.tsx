@@ -16,7 +16,7 @@ export default function Platform() {
           {/* For Business */}
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 overflow-hidden">
             <div className="relative w-full md:w-[40%] aspect-[4/3] flex-shrink-0 rounded-2xl overflow-hidden">
-              <Image src="/images/misc/mission-bg.webp" alt="企業の方へ" fill className="object-cover" />
+              <Image src="/images/misc/mission-bg.webp" alt="企業の方へ" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" loading="lazy" />
             </div>
             <div className="flex-1 px-6 pb-6 md:px-0 md:pr-8 md:py-8">
               <p className="text-xs font-bold text-primary tracking-[0.15em] uppercase mb-2">For Business</p>
@@ -33,7 +33,7 @@ export default function Platform() {
           {/* For Creators */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10 overflow-hidden">
             <div className="relative w-full md:w-[40%] aspect-[4/3] flex-shrink-0 rounded-2xl overflow-hidden">
-              <Image src="/images/misc/hero.webp" alt="クリエイターの方へ" fill className="object-cover" />
+              <Image src="/images/misc/hero.webp" alt="クリエイターの方へ" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" loading="lazy" />
             </div>
             <div className="flex-1 px-6 pb-6 md:px-0 md:pl-8 md:py-8">
               <p className="text-xs font-bold text-accent tracking-[0.15em] uppercase mb-2">For Creators</p>
