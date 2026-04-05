@@ -1,32 +1,40 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const members = [
   {
     name: "井上 蓮",
     role: "CEO",
-    desc: "早稲田大学在学中に営業代理店を立ち上げ、2年で4億を売り上げ、支店メンバー100人の責任者を務める。SHOWROOM株式会社に1人目の新卒として就職し新規事業部に配属。toC向けの動画コンテンツ配信サービス(smash.)を立ち上げメンバーとして参画し2年間で200万DLを達成。更に10以上の新規のプロジェクト立ち上げに関わる。21年8月、CEOとしてReBear社を創業。",
-    image: "/images/member-1.jpg",
+    desc: `小学6年時にSNSアフィリエイトで初めてのマネタイズに成功。中学時代にはせどり・物販事業を展開し、高校2年時にはAI×Web制作事業で法人を設立。個人から中小企業まで幅広いクライアントのWeb制作を手がける。高校卒業と同時に上京し、「ホームページは今後AIに取って代わられる」という確信のもと、SNSにおける人間の表現力に着目し新たな事業を構想。その中で、一緒に事業をできる仲間を求めて全国を飛び回っていたCOO太田賢介と出会い、理念で意気投合しフォロミーを設立。CEOとしてビジネスモデルの設計からマーケティング・デザイン・営業まで全領域を統括する。`,
+    image: "/images/members/inoue_ren_icon.webp",
+    cover: "/images/members/inoue_ren_cover2.webp",
+    avatarScale: 1, avatarPos: "center",
   },
   {
     name: "太田 健介",
     role: "COO",
-    desc: "早稲田大学在学中に営業代理店を立ち上げ、2年で4億を売り上げ、支店メンバー100人の責任者を務める。SHOWROOM株式会社に1人目の新卒として就職し新規事業部に配属。toC向けの動画コンテンツ配信サービス(smash.)を立ち上げメンバーとして参画し2年間で200万DLを達成。更に10以上の新規のプロジェクト立ち上げに関わる。21年8月、CEOとしてReBear社を創業。",
-    image: "/images/member-2.jpg",
+    desc: `中国にルーツを持ち、日中バイリンガルとして育つ。海外研修への参加を目的に高校へ進学し、在学中に高卒認定を取得したうえで中退。その後、一緒に事業をできる仲間を求めて全国を飛び回る中でCEO井上蓮と出会い、理念で意気投合しフォロミーを共同で設立。仲間を集めてチームを立ち上げ、COOとして事業企画・戦略立案からタスク設計・実行管理までを一手に担う。日中英トリリンガルの視野と「最短で動き、走りながら考える」突破力を武器に、事業を前に進める。`,
+    image: "/images/members/ota_kensuke.webp",
+    cover: "/images/members/ota_kensuke_cover5.webp",
+    avatarScale: 1, avatarPos: "center",
   },
   {
     name: "岡崎 新",
     role: "CTO",
-    desc: "早稲田大学在学中に営業代理店を立ち上げ、2年で4億を売り上げ、支店メンバー100人の責任者を務める。SHOWROOM株式会社に1人目の新卒として就職し新規事業部に配属。toC向けの動画コンテンツ配信サービス(smash.)を立ち上げメンバーとして参画し2年間で200万DLを達成。更に10以上の新規のプロジェクト立ち上げに関わる。21年8月、CEOとしてReBear社を創業。",
-    image: "/images/member-3.jpg",
+    desc: "慶應義塾大学在学中のシステムエンジニア。高校時代にロボットアイデア甲子園全国大会受賞・ロボカップジュニアジャパン全国大会7位入賞など技術分野で実績を残す一方、高校生ビジネスプラングランプリベスト100・プレゼン甲子園地区大会優秀賞とビジネス領域でも成果を上げる。大学では複数の学生団体に所属し、HP・LP・アプリの開発を経験。全国を飛び回りエンジニアを探していたCOO太田賢介と出会い、理念と事業内容に共感しフォロミーに参画。CTOとして管理システムや自社アプリの開発を担う。",
+    image: "/images/members/okazaki_arata_icon3.webp",
+    cover: "/images/members/okazaki_arata.webp",
+    avatarScale: 1.4, avatarPos: "0% 20%",
   },
   {
     name: "伊藤 由莉奈",
     role: "Sales Manager",
-    desc: "早稲田大学在学中に営業代理店を立ち上げ、2年で4億を売り上げ、支店メンバー100人の責任者を務める。SHOWROOM株式会社に1人目の新卒として就職し新規事業部に配属。toC向けの動画コンテンツ配信サービス(smash.)を立ち上げメンバーとして参画し2年間で200万DLを達成。更に10以上の新規のプロジェクト立ち上げに関わる。21年8月、CEOとしてReBear社を創業。",
-    image: "/images/hero.jpg",
+
+    desc: `早稲田大学在学中。大学1年次よりライバーやTikTokの大手ベンチャーで動画制作のインターンを経験。自社アカウント運用を担当する中で、公式アカウント方式に加えUGC型の運用を自ら提案し実行するなど、早くから企画力を発揮する。また、個人でも複数のSNSアカウントを立ち上げ、初投稿から万再生以上を連発。ショート動画のアルゴリズムに対する深い知見を持つ。CEO井上蓮と出会いビジョンや理念に共感し、SNSの事業を立ち上げると聞きフォロミーに参画。SALES MANAGERとして柔軟な発想力と論理的な思考力を活かし、営業および動画の分析を担当する。`,
+    image: "/images/members/ito_yurina_icon.webp",
+    cover: "/images/members/ito_yurina_cover.webp",
+    avatarScale: 1.4, avatarPos: "center 30%",
   },
 ];
 
@@ -35,12 +43,8 @@ export default function Member() {
     <section id="member" className="relative py-28 md:py-36 overflow-hidden rounded-tl-[80px] md:rounded-tl-[140px]" style={{ background: "#272727" }}>
       <div className="mx-auto max-w-[480px] md:max-w-[1100px] px-6">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+        <div
+          className="animate-fade-in-up text-center mb-16"
         >
           <h2 className="text-[11vw] md:text-[7rem] lg:text-[8.5rem] font-black tracking-tighter uppercase leading-none gradient-text-mesh mb-6">
             MEMBER
@@ -50,24 +54,21 @@ export default function Member() {
             <br />
             トレンドをハックします。
           </p>
-        </motion.div>
+        </div>
 
         {/* Member cards - 2x2 grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {members.map((member, i) => (
-            <motion.div
+            <div
               key={member.name}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="bg-[#383838] rounded-2xl border border-white/10 overflow-hidden pb-6"
+              className="animate-fade-in-up bg-[#383838] rounded-2xl border border-white/10 overflow-hidden pb-6"
+              style={{ animationDelay: `${i * 0.12}s` }}
             >
               {/* Photo + overlapping avatar */}
               <div className="relative mb-0">
                 <div className="relative w-full aspect-[2/1] rounded-t-2xl overflow-hidden">
                   <Image
-                    src={member.image}
+                    src={member.cover || member.image}
                     alt={member.name}
                     fill
                     className="object-cover"
@@ -84,6 +85,7 @@ export default function Member() {
                     alt={member.name}
                     fill
                     className="object-cover"
+                    style={{ transform: `scale(${member.avatarScale})`, objectPosition: member.avatarPos }}
                   />
                 </div>
                 <div className="pb-1">
@@ -100,37 +102,27 @@ export default function Member() {
               <p className="text-sm text-white/80 leading-relaxed px-5 pb-2">
                 {member.desc}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center text-white/50 font-bold text-4xl md:text-5xl mt-16"
+        <p
+          className="animate-fade-in-up text-center text-white/50 font-bold text-4xl md:text-5xl mt-16"
         >
           + 2 Members
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center text-white/50 font-bold text-4xl md:text-5xl mt-4"
+        </p>
+        <p
+          className="animate-fade-in-up text-center text-white/50 font-bold text-4xl md:text-5xl mt-4"
+          style={{ animationDelay: "0.1s" }}
         >
           +
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center text-white/50 font-bold text-4xl md:text-5xl mt-4"
+        </p>
+        <p
+          className="animate-fade-in-up text-center text-white/50 font-bold text-4xl md:text-5xl mt-4"
+          style={{ animationDelay: "0.2s" }}
         >
           Hundreds of Young Creators
-        </motion.p>
+        </p>
       </div>
     </section>
   );

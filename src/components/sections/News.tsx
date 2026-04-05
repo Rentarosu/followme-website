@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 type NewsItem = {
@@ -27,12 +26,8 @@ export default function News() {
   return (
     <section id="news" className="relative py-16 md:py-24 bg-white overflow-hidden">
       <div className="mx-auto max-w-[800px] px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
+        <div
+          className="animate-fade-in-up text-center mb-14"
         >
           <p className="text-sm font-bold text-primary tracking-[0.2em] uppercase mb-3">
             News
@@ -40,17 +35,14 @@ export default function News() {
           <h2 className="text-3xl md:text-4xl font-black text-dark tracking-tight">
             お知らせ
           </h2>
-        </motion.div>
+        </div>
 
         <div>
           {news.map((item, i) => (
-            <motion.div
+            <div
               key={`${item.date}-${i}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`py-6 ${i !== news.length - 1 ? "border-b border-gray-200" : ""}`}
+              className={`animate-fade-in-up py-6 ${i !== news.length - 1 ? "border-b border-gray-200" : ""}`}
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
               <span className="text-xs font-bold text-primary tracking-wide">
                 {item.date}
@@ -61,7 +53,7 @@ export default function News() {
               <p className="text-sm text-dark/50 leading-relaxed mt-2">
                 {item.body}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
 

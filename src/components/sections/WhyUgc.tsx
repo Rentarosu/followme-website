@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const stats = [
   {
     number: "92",
@@ -36,13 +34,7 @@ export default function WhyUgc() {
   return (
     <section id="why-ugc" className="relative pt-16 pb-10 md:pt-24 md:pb-14 overflow-hidden" style={{ background: "linear-gradient(135deg, #eef8ff 0%, #f3eeff 50%, #e8f4ff 100%)" }}>
       <div className="mx-auto max-w-[1100px] px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
-        >
+        <div className="text-center mb-14 animate-fade-in-up">
           <p className="text-sm font-bold text-primary tracking-[0.2em] uppercase mb-3">
             Why UGC
           </p>
@@ -54,17 +46,14 @@ export default function WhyUgc() {
             <br className="hidden md:block" />
             購買行動に最も大きな影響を与えています。
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, i) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group relative bg-white rounded-2xl border border-gray-100 p-8 md:p-10 text-center hover:shadow-xl hover:border-primary/20 transition-all duration-400"
+              className="group relative bg-white rounded-2xl border border-gray-100 p-8 md:p-10 text-center hover:shadow-xl hover:border-primary/20 transition-all duration-400 animate-fade-in-up"
+              style={{ animationDelay: `${i * 0.15}s` }}
             >
               <h3 className="text-base font-bold text-dark mb-3">
                 {stat.label}
@@ -81,7 +70,7 @@ export default function WhyUgc() {
                 {stat.desc}
                 <span className="text-[10px] text-dark/30 ml-0.5">{stat.note}</span>
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
@@ -33,7 +32,7 @@ export default function Header() {
       <div className="px-8 md:px-12 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="フォロミー" width={52} height={52} className="object-cover" />
+          <Image src="/logo.webp" alt="フォロミー" width={52} height={52} className="object-cover" />
           <span className="font-bold text-lg tracking-tight text-dark">フォロミー</span>
         </a>
 
@@ -69,37 +68,31 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-lg border-b border-gray-100"
-          >
-            <nav className="flex flex-col px-6 py-4 gap-1">
-              {navLinks.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className="py-3 text-base font-medium text-dark hover:text-primary transition-colors"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {l.label}
-                </a>
-              ))}
+      {menuOpen && (
+        <div
+          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-lg border-b border-gray-100 animate-fade-in-up"
+        >
+          <nav className="flex flex-col px-6 py-4 gap-1">
+            {navLinks.map((l) => (
               <a
-                href="#contact"
-                className="mt-2 text-center font-bold text-white bg-dark px-5 py-3 rounded-full"
+                key={l.href}
+                href={l.href}
+                className="py-3 text-base font-medium text-dark hover:text-primary transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                お問い合わせ
+                {l.label}
               </a>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <a
+              href="#contact"
+              className="mt-2 text-center font-bold text-white bg-dark px-5 py-3 rounded-full"
+              onClick={() => setMenuOpen(false)}
+            >
+              お問い合わせ
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

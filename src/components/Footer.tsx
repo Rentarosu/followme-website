@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="フォロミー" width={44} height={44} className="object-cover" />
+              <Image src="/logo.webp" alt="フォロミー" width={44} height={44} className="object-cover" />
               <span className="font-bold text-lg text-white">フォロミー</span>
             </div>
             <ul className="space-y-2 text-sm">
