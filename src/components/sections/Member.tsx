@@ -9,7 +9,7 @@ const members = [
     desc: `小学6年時にSNSアフィリエイトで初めてのマネタイズに成功。中学時代にはせどり・物販事業を展開し、高校2年時にはAI×Web制作事業で法人を設立。個人から中小企業まで幅広いクライアントのWeb制作を手がける。高校卒業と同時に上京し、「ホームページは今後AIに取って代わられる」という確信のもと、SNSにおける人間の表現力に着目し新たな事業を構想。その中で、一緒に事業をできる仲間を求めて全国を飛び回っていたCOO太田賢介と出会い、理念で意気投合しフォロミーを設立。CEOとしてビジネスモデルの設計からマーケティング・デザイン・営業まで全領域を統括する。`,
     image: "/images/members/inoue_ren_icon2.webp",
     cover: "/images/members/inoue_ren_cover2.webp",
-    avatarScale: 1.6, avatarPos: "center 25%",
+    avatarScale: 1.3, avatarPos: "center 25%",
   },
   {
     name: "太田 健介",
