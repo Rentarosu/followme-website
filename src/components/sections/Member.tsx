@@ -95,7 +95,7 @@ export default function Member() {
                     className="object-cover"
                     sizes="112px"
                     loading="lazy"
-                    style={{ transform: `scale(${member.avatarScale})`, objectPosition: member.avatarPos }}
+                    style={{ transform: `scale(${member.avatarScale})`, transformOrigin: member.avatarPos, objectPosition: member.avatarPos }}
                   />
                 </div>
                 <div className="pb-1">
