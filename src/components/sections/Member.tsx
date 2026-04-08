@@ -25,7 +25,7 @@ const members = [
     desc: "慶應義塾大学在学中のシステムエンジニア。高校時代にロボットアイデア甲子園全国大会受賞・ロボカップジュニアジャパン全国大会7位入賞など技術分野で実績を残す一方、高校生ビジネスプラングランプリベスト100・プレゼン甲子園地区大会優秀賞とビジネス領域でも成果を上げる。大学では複数の学生団体に所属し、HP・LP・アプリの開発を経験。全国を飛び回りエンジニアを探していたCOO太田賢介と出会い、理念と事業内容に共感しフォロミーに参画。CTOとして管理システムや自社アプリの開発を担う。",
     image: "/images/members/okazaki_arata_icon4.webp",
     cover: "/images/members/okazaki_arata.webp",
-    avatarScale: 1.4, avatarPos: "0% 20%",
+    avatarScale: 1.2, avatarPos: "center 15%",
   },
   {
     name: "伊藤 由莉奈",
