@@ -96,7 +96,7 @@ export default function Hero() {
         {/* Left: Text + Buttons */}
         <div className="flex-1 flex flex-col justify-center px-8 md:pl-24 lg:pl-32 pt-20 md:pt-0 md:max-w-[55%] order-1">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-dark leading-tight">
-            あなたらしさを<br /><span className="gradient-text-primary">トレンドに。</span>
+            あなたらしさが、<br /><span className="gradient-text-primary">トレンドに。</span>
           </h1>
           <p className="text-sm md:text-base font-bold text-dark/45 mt-4 mb-2 md:mb-8">
             AIの時代だからこそ、あなたの表現に価値がある。
