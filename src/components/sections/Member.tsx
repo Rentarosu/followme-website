@@ -15,7 +15,7 @@ const members = [
     name: "太田 健介",
     role: "COO",
     desc: `中国にルーツを持ち、日中バイリンガルとして育つ。海外研修への参加を目的に高校へ進学し、在学中に高卒認定を取得したうえで中退。その後、一緒に事業をできる仲間を求めて全国を飛び回る中でCEO井上蓮と出会い、理念で意気投合しフォロミーを共同で設立。仲間を集めてチームを立ち上げ、COOとして事業企画・戦略立案からタスク設計・実行管理までを一手に担う。日中英トリリンガルの視野と「最短で動き、走りながら考える」突破力を武器に、事業を前に進める。`,
-    image: "/images/members/ota_kensuke.webp",
+    image: "/images/members/ota_kensuke_icon2.webp",
     cover: "/images/members/ota_kensuke_cover7.webp",
     avatarScale: 1, avatarPos: "center",
   },
