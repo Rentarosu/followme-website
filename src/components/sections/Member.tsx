@@ -33,7 +33,7 @@ const members = [
 
     desc: `早稲田大学在学中。大学1年次よりライバーやTikTokの大手ベンチャーで動画制作のインターンを経験。自社アカウント運用を担当する中で、公式アカウント方式に加えUGC型の運用を自ら提案し実行するなど、早くから企画力を発揮する。また、個人でも複数のSNSアカウントを立ち上げ、初投稿から万再生以上を連発。ショート動画のアルゴリズムに対する深い知見を持つ。CEO井上蓮と出会いビジョンや理念に共感し、SNSの事業を立ち上げると聞きフォロミーに参画。SALES MANAGERとして柔軟な発想力と論理的な思考力を活かし、営業および動画の分析を担当する。`,
     image: "/images/members/ito_yurina_icon2.webp",
-    cover: "/images/members/ito_yurina_cover.webp",
+    cover: "",
     avatarScale: 1.6, avatarPos: "45% 25%",
   },
 ];
@@ -67,14 +67,20 @@ export default function Member() {
               {/* Photo + overlapping avatar */}
               <div className="relative mb-0">
                 <div className="relative w-full aspect-[2/1] rounded-t-2xl overflow-hidden">
-                  <Image
-                    src={member.cover || member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    loading="lazy"
-                  />
+                  {member.cover ? (
+                    <Image
+                      src={member.cover}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-[#2f2f2f] flex items-center justify-center">
+                      <span className="text-white/20 text-sm font-bold">Coming Soon</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
